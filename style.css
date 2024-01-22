@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fdfafa;
+    line-height: 1.6;
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1, h2, h3 {
+    color: #fdfcfc;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+nav .mainMenu li a:hover {
+    color: rgba(255, 255, 255, 0.712);
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu, .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo {
+    margin: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #07132b, #07132b);
+}
+
+/* Main Content */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+section {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.endpoint, .faq-item {
+    background-color: #252525;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+code, pre {
+    background-color: #333333;
+    color: #9c9c9c;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    border-radius: 4px;
+}
+
+pre {
+    overflow: auto;
+}
+
+/* Interactive API Tester Styles */
+.api-tester {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#timeSelector {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+#apiResponse {
+    margin-top: 20px;
+    background-color: #333;
+    color: #9c9c9c;
+    padding: 15px;
+    border-radius: 4px;
+    display: none;
+}
+
+button {
+    background-color: #07132b;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #07132b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    color: #bbb;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#sourceBtn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+#sourceBtn:hover {
+    background-color: #07132b;
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+}
+
+.social-media-icons a {
+    color: #fff;
+    font-size: 40px;
+    margin: 15px 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.social-media-icons a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+    background-color: #07132b;
+}
+
+/* Wick Studio Logo */
+.wick-studio-logo {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1000;
+}
+
+.wick-studio-logo img {
+    width: 50px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.wick-studio-logo img:hover {
+    opacity: 1;
+}
+
+/* Side Boxes for Usage Example and Response */
+.side-boxes {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1000;
+}
+
+/* Style for the box container with a frame */
+.box {
+    background-color: #252525;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 300px;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #3a3a3a;
+}
+
+
+.box-heading {
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+.box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.box h3 {
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.box code, .box pre {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+/* Responsive Navigation Menu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        margin-bottom: 10px;
+    }
+
+    .side-boxes {
+        position: relative;
+        width: auto;
+        margin: 10px;
+        align-items: center;
+        left: 0;
+        transform: translateY(0%);
+        z-index: -1;
+    }
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        transition: top 1s ease 0s;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .openMenu {
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        color: rgba(255, 255, 255, 0.712);
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+}

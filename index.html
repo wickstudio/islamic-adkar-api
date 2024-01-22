@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Islamic Adkar API</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="wick-studio-logo">
+        <img src="images/hero.png" alt="Wick Studio Logo">
+    </div>
+    <nav>
+      <div class="logo"><h1>Islamic Adkar API</h1></div>
+      <div class="openMenu"><i class="fa fa-bars"></i></div>
+      <ul class="mainMenu">
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#api-info">API Endpoints</a></li>
+        <li><a href="#live-demo">Live Demo</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#about-adkar">About Adkar</a></li>
+        <div class="closeMenu"><i class="fa fa-times"></i></div>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Welcome to the Islamic Adkar API</h1>
+      <p>Explore the spiritual world of Islamic supplications</p>
+    </header>
+
+    <main>
+      <section id="introduction">
+        <h2>About the API</h2>
+        <p>
+          Designed for developers and creators, our API provides structured
+          access to Islamic Adkar, making integration into apps and websites
+          seamless.
+        </p>
+      </section>
+
+      <section id="api-info">
+        <h2>API Endpoints</h2>
+        <div class="endpoint">
+          <p><b>Morning Adkar :</b> <code>http://islamicadkar.xyz/api/adkar/morning</code></p>
+          <p><b>Evening Adkar :</b> <code>http://islamicadkar.xyz/api/adkar/evening</code></p>
+          <p><b>Night Adkar :</b> <code>http://islamicadkar.xyz/api/adkar/night</code></p>
+        </div>
+      </section>
+
+      <section id="live-demo">
+        <h2>Try It Out</h2>
+        <p>Test the API endpoints right here :</p>
+        <div class="api-tester">
+          <select id="timeSelector">
+            <option value="morning">Morning</option>
+            <option value="evening">Evening</option>
+            <option value="night">Night</option>
+          </select>
+          <button onclick="testApi()">Fetch Adkar</button>
+          <div id="apiResponse"></div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>Is this API free to use?</h3>
+          <p>
+            Yes, the Islamic Adkar API is completely free for personal and
+            commercial use.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>How often is the content updated?</h3>
+          <p>
+            We periodically update the content to ensure its relevance and
+            accuracy.
+          </p>
+        </div>
+      </section>
+
+      <section id="about-adkar">
+        <h2>About Adkar</h2>
+        <p>
+          Learn more about the importance and significance of Adkar in Islamic
+          tradition.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Wick Studio API. All rights reserved.</p>
+      <button id="sourceBtn">Source</button>
+    </footer>
+
+    <div class="social-media-icons">
+      <a href="https://github.com/wickstudio" target="_blank"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a href="https://discord.gg/wicks" target="_blank"
+        ><i class="fab fa-discord"></i
+      ></a>
+      <a href="https://www.youtube.com/@wick_studio" target="_blank"
+        ><i class="fab fa-youtube"></i
+      ></a>
+    </div>
+
+    <div class="side-boxes">
+      <div class="box usage-example">
+        <h3 class="box-heading">Usage Example</h3>
+        <code>GET /api/adkar/morning</code>
+      </div>
+      <div class="box response-example">
+        <h3>Response</h3>
+        <pre>
+{
+    "title": "Adkar for Morning",
+    "message": "Example Adkar text"
+}</pre
+        >
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+      document.getElementById("sourceBtn").onclick = function () {
+        window.location.href = "https://github.com/wickstudio/islamic-adkar-api";
+      };
+    </script>
+  </body>
+</html>
